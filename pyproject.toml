@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "storesentinel"
+version = "1.0.0"
+description = "Zero-dependency static analyzer that scans iOS / Android / Flutter / React Native projects for common App Store & Google Play rejection risks."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "gitstq" }]
+keywords = ["app-store", "google-play", "compliance", "static-analysis", "ios", "android", "flutter"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+storesentinel = "storesentinel.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["storesentinel*"]
